@@ -34,7 +34,7 @@ export default {
   },
   computed: {
     getWeather() {
-      return this.$store.getters.todoweather;
+      return this.$store.getters.todoWeather;
     }
   }
 };

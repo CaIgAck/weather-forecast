@@ -3,6 +3,7 @@ import Vuex from "vuex";
 import axios from "axios";
 import { GET_WEATHER } from "./mutationtypes/mutation-types";
 import { WEARTER_GET } from "./actiontypes/action-types";
+import apiKey from "../helper/apiKey";
 
 Vue.use(Vuex);
 
@@ -26,7 +27,7 @@ export default new Vuex.Store({
     status: 200
   },
   getters: {
-    todoweather: state => state.weather
+    todoWeather: state => state.weather
   },
   mutations: {
     [GET_WEATHER](state, result) {
@@ -41,8 +42,7 @@ export default new Vuex.Store({
           {
             headers: {
               "x-rapidapi-host": "community-open-weather-map.p.rapidapi.com",
-              "x-rapidapi-key":
-                "489a96d491msh54c10c1aa291386p1fc25djsnf5a3a81bae62"
+              "x-rapidapi-key": apiKey
             }
           }
         )
